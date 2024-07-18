@@ -5,7 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from testCase.conftest import driver
 from utilities import read_properties, random_email_generator
 from utilities.cutom_logger import LogGen
-from pageObject import my_account, ecommerce_homepage
+from pages import my_account, ecommerce_homepage
 
 
 class TestNewUserRegistration:

@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 from utilities import read_properties, random_email_generator
-from pageObject import my_account, ecommerce_homepage
+from pages import my_account, ecommerce_homepage
 
 # URL = 'http://localhost/ecommerce_project'
 
