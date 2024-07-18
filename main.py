@@ -1,16 +1,45 @@
-# This is a sample Python script.
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from utilities import read_properties, random_email_generator
+from pageObject import my_account, ecommerce_homepage
+
+# URL = 'http://localhost/ecommerce_project'
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+driver = webdriver.Edge()
+driver.get(read_properties.ReadConfig.get_application_URL())
+driver.maximize_window()
+
+#  navigate to home page > my account
+ecm_obj1 = ecommerce_homepage.HomePage(driver)
+ecm_obj1.click_my_account()
+
+# # user registration process
+
+# Create my account registration page object
+# my_account_obj = my_account.Registration(driver)
+
+# generate random email address
+# email = random_email_generator.generate_email()
+
+# my_account_obj.enter_email(email)
+# print(email)
+# my_account_obj.enter_password()
+# my_account_obj.click_register()
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# # user login process
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# Create my account > login page object
+my_account_login_obj = my_account.Login(driver)
+
+username = 'sl6xm-@hotmail.com'
+my_account_login_obj.enter_username(username)
+my_account_login_obj.enter_password()
+my_account_login_obj.click_login()
+
+time.sleep(3)
+
+driver.close()
