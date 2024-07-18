@@ -32,7 +32,7 @@ This project contains a suite of automation tests designed to test the functiona
 
 - import cloned repository as project
 
-- install selenium
+- install selenium 4
 
 - install pytest
 
