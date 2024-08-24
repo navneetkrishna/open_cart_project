@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 from selenium.webdriver.support.ui import WebDriverWait
 from utilities import read_properties
-from utilities.cutom_logger import LogGen
+from utilities.custom_logger import LogGen
 from pages import my_account, ecommerce_homepage
 
 
