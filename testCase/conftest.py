@@ -1,6 +1,8 @@
 import pytest
 from selenium import webdriver
 
+from utilities.custom_logger import LogGen
+
 
 # session-level scope ensures one driver per test session
 @pytest.fixture(scope="session")
@@ -36,3 +38,10 @@ def pytest_addoption(parser):
                      action="store",
                      default="chrome",
                      help="Browser to run tests with, e.g., chrome or edge")
+
+@pytest.fixture(scope='session')
+def logger():
+
+    logger = LogGen.loggen()
+
+    return logger

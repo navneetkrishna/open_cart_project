@@ -33,6 +33,7 @@ class Registration:
         # Find the password textbox and enter the password
         password_txtbox = self.driver.find_element(By.XPATH, self.password_txtbox_xpath)
         password_txtbox.send_keys(password)
+
     def click_register(self):
         self.driver.find_element(By.XPATH, self.register_button_xpath).click()
 
@@ -44,21 +45,26 @@ class Login:
     password_txtbox_xpath = '//input[@id="password"]'
     login_button_xpath = '//button[contains(text(),"Log in")]'
 
+    # '(//a[contains(text(), "Log out")])[1]' > 2 elements are present with same XAPTH,
+    # used index (XPATH)[1] to select the 1st one
+    logout_button_xpath = '(//a[contains(text(), "Log out")])[1]'
+
     def __init__(self, driver):
         self.driver = driver
 
     # actions
 
     def enter_username(self, username):
-
         username_txtbox = self.driver.find_element(By.XPATH, self.username_txtbox_xpath)
         username_txtbox.send_keys(username)
 
     # password for new email is :Demo1234@
     def enter_password(self, password='Demo1234@'):
-
         password_txtbox = self.driver.find_element(By.XPATH, self.password_txtbox_xpath)
         password_txtbox.send_keys(password)
 
     def click_login(self):
         login_btn = self.driver.find_element(By.XPATH, self.login_button_xpath).click()
+
+    def click_logout(self):
+        logout_btn = self.driver.find_element(By.XPATH, self.logout_button_xpath).click()

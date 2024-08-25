@@ -1,51 +1,103 @@
-082524 02 22 40 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 22 40 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 22 40 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 22 40 PM: INFO: --------------------adding item to cart---------------------
-082524 02 22 40 PM: INFO: --------------------adding item to cart---------------------
-082524 02 22 40 PM: INFO: --------------------adding item to cart---------------------
-082524 02 22 40 PM: INFO: add_item_to_cart
-082524 02 22 40 PM: INFO: add_item_to_cart
-082524 02 22 40 PM: INFO: add_item_to_cart
-082524 02 37 11 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 37 11 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 37 11 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 37 11 PM: INFO: --------------------adding item to cart---------------------
-082524 02 37 11 PM: INFO: --------------------adding item to cart---------------------
-082524 02 37 11 PM: INFO: --------------------adding item to cart---------------------
-082524 02 37 11 PM: INFO: add_item_to_cart
-082524 02 37 11 PM: INFO: add_item_to_cart
-082524 02 37 11 PM: INFO: add_item_to_cart
-082524 02 38 08 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 38 08 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 38 08 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 38 08 PM: INFO: --------------------adding item to cart---------------------
-082524 02 38 08 PM: INFO: --------------------adding item to cart---------------------
-082524 02 38 08 PM: INFO: --------------------adding item to cart---------------------
-082524 02 38 08 PM: INFO: add_item_to_cart
-082524 02 38 08 PM: INFO: add_item_to_cart
-082524 02 38 08 PM: INFO: add_item_to_cart
-082524 02 45 14 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 45 14 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 45 14 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 45 14 PM: INFO: --------------------adding item to cart---------------------
-082524 02 45 14 PM: INFO: --------------------adding item to cart---------------------
-082524 02 45 14 PM: INFO: --------------------adding item to cart---------------------
-082524 02 45 14 PM: INFO: add_item_to_cart
-082524 02 45 14 PM: INFO: add_item_to_cart
-082524 02 45 14 PM: INFO: add_item_to_cart
-082524 02 45 18 PM: INFO: testCase.test_add_item_to_cart successfully executed, test result: Pass
-082524 02 45 18 PM: INFO: testCase.test_add_item_to_cart successfully executed, test result: Pass
-082524 02 45 18 PM: INFO: testCase.test_add_item_to_cart successfully executed, test result: Pass
-082524 02 48 30 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 48 30 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 48 30 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082524 02 48 30 PM: INFO: --------------------adding item to cart---------------------
-082524 02 48 30 PM: INFO: --------------------adding item to cart---------------------
-082524 02 48 30 PM: INFO: --------------------adding item to cart---------------------
-082524 02 48 30 PM: INFO: add_item_to_cart
-082524 02 48 30 PM: INFO: add_item_to_cart
-082524 02 48 30 PM: INFO: add_item_to_cart
-082524 02 48 34 PM: INFO: testCase.test_add_item_to_cart successfully executed, test result: Pass
-082524 02 48 34 PM: INFO: testCase.test_add_item_to_cart successfully executed, test result: Pass
-082524 02 48 34 PM: INFO: testCase.test_add_item_to_cart successfully executed, test result: Pass
+082524 11 11 06 PM: INFO: --------------------valid login---------------------
+082524 11 11 06 PM: INFO: Executing test case ID: test_valid_user_login
+082524 11 11 06 PM: DEBUG: My Account page object created
+082524 11 11 06 PM: DEBUG: *Read username: demo12@gmail.com and password from config.ini file*
+082524 11 11 11 PM: DEBUG: User: demo12@gmail.com has been logged in successfully
+082524 11 11 11 PM: INFO: Test case has been executed successfully, test result: PASS
+082524 11 11 11 PM: INFO: --------------------search a valid item---------------------
+082524 11 11 11 PM: INFO: test_valid_search_item
+082524 11 11 19 PM: DEBUG: item name['V-Neck T-Shirt'] is searched
+082524 11 11 19 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+082524 11 11 29 PM: ERROR: User is not logged in, skipping the test.Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF648AE9642+30946]
+	(No symbol) [0x00007FF648A9E3D9]
+	(No symbol) [0x00007FF648996FDA]
+	(No symbol) [0x00007FF6489E822C]
+	(No symbol) [0x00007FF6489E850C]
+	(No symbol) [0x00007FF648A2DCB7]
+	(No symbol) [0x00007FF648A0CAAF]
+	(No symbol) [0x00007FF648A2B041]
+	(No symbol) [0x00007FF648A0C813]
+	(No symbol) [0x00007FF6489DA6E5]
+	(No symbol) [0x00007FF6489DB021]
+	GetHandleVerifier [0x00007FF648C1F84D+1301229]
+	GetHandleVerifier [0x00007FF648C2BDC7+1351783]
+	GetHandleVerifier [0x00007FF648C22A13+1313971]
+	GetHandleVerifier [0x00007FF648B1DD16+245686]
+	(No symbol) [0x00007FF648AA759F]
+	(No symbol) [0x00007FF648AA3814]
+	(No symbol) [0x00007FF648AA39A2]
+	(No symbol) [0x00007FF648A9A3FF]
+	BaseThreadInitThunk [0x00007FF860D9257D+29]
+	RtlUserThreadStart [0x00007FF86194AF28+40]
+
+082524 11 12 46 PM: INFO: --------------------valid login---------------------
+082524 11 12 46 PM: INFO: Executing test case ID: test_valid_user_login
+082524 11 12 46 PM: DEBUG: My Account page object created
+082524 11 12 46 PM: DEBUG: *Read username: demo12@gmail.com and password from config.ini file*
+082524 11 12 52 PM: DEBUG: User: demo12@gmail.com has been logged in successfully
+082524 11 12 52 PM: INFO: Test case has been executed successfully, test result: PASS
+082524 11 13 15 PM: INFO: --------------------search a valid item---------------------
+082524 11 13 15 PM: INFO: test_valid_search_item
+082524 11 13 23 PM: DEBUG: item name['Sunglasses'] is searched
+082524 11 13 23 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+082524 11 15 03 PM: INFO: User is logged in.
+082524 11 15 17 PM: INFO: User is logged in.
+082524 11 15 38 PM: INFO: User is logged in.
+082524 11 16 17 PM: INFO: --------------------valid login---------------------
+082524 11 16 17 PM: INFO: Executing test case ID: test_valid_user_login
+082524 11 16 17 PM: DEBUG: My Account page object created
+082524 11 16 17 PM: DEBUG: *Read username: demo12@gmail.com and password from config.ini file*
+082524 11 16 23 PM: DEBUG: User: demo12@gmail.com has been logged in successfully
+082524 11 16 23 PM: INFO: Test case has been executed successfully, test result: PASS
+082524 11 16 23 PM: INFO: --------------------search a valid item---------------------
+082524 11 16 23 PM: INFO: test_valid_search_item
+082524 11 16 31 PM: DEBUG: item name['Single'] is searched
+082524 11 16 31 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+082524 11 18 11 PM: ERROR: User is not logged in, skipping the test.Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF648AE9642+30946]
+	(No symbol) [0x00007FF648A9E3D9]
+	(No symbol) [0x00007FF648996FDA]
+	(No symbol) [0x00007FF6489E822C]
+	(No symbol) [0x00007FF6489E850C]
+	(No symbol) [0x00007FF648A2DCB7]
+	(No symbol) [0x00007FF648A0CAAF]
+	(No symbol) [0x00007FF648A2B041]
+	(No symbol) [0x00007FF648A0C813]
+	(No symbol) [0x00007FF6489DA6E5]
+	(No symbol) [0x00007FF6489DB021]
+	GetHandleVerifier [0x00007FF648C1F84D+1301229]
+	GetHandleVerifier [0x00007FF648C2BDC7+1351783]
+	GetHandleVerifier [0x00007FF648C22A13+1313971]
+	GetHandleVerifier [0x00007FF648B1DD16+245686]
+	(No symbol) [0x00007FF648AA759F]
+	(No symbol) [0x00007FF648AA3814]
+	(No symbol) [0x00007FF648AA39A2]
+	(No symbol) [0x00007FF648A9A3FF]
+	BaseThreadInitThunk [0x00007FF860D9257D+29]
+	RtlUserThreadStart [0x00007FF86194AF28+40]
+
+082524 11 19 21 PM: INFO: --------------------valid login---------------------
+082524 11 19 21 PM: INFO: Executing test case ID: test_valid_user_login
+082524 11 19 21 PM: DEBUG: My Account page object created
+082524 11 19 21 PM: DEBUG: *Read username: demo12@gmail.com and password from config.ini file*
+082524 11 19 26 PM: DEBUG: User: demo12@gmail.com has been logged in successfully
+082524 11 19 26 PM: INFO: Test case has been executed successfully, test result: PASS
+082524 11 19 26 PM: INFO: --------------------search a valid item---------------------
+082524 11 19 26 PM: INFO: test_valid_search_item
+082524 11 19 34 PM: DEBUG: item name['Sunglasses'] is searched
+082524 11 19 34 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+082524 11 20 27 PM: ERROR: User is not logged in, skipping the test.HTTPConnectionPool(host='localhost', port=14739): Max retries exceeded with url: /session/80d16c636ef566213d5f3a9eaae2571a/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C4168205C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+082524 11 21 21 PM: INFO: --------------------valid login---------------------
+082524 11 21 21 PM: INFO: Executing test case ID: test_valid_user_login
+082524 11 21 21 PM: DEBUG: My Account page object created
+082524 11 21 21 PM: DEBUG: *Read username: demo12@gmail.com and password from config.ini file*
+082524 11 21 26 PM: DEBUG: User: demo12@gmail.com has been logged in successfully
+082524 11 21 26 PM: INFO: Test case has been executed successfully, test result: PASS
+082524 11 21 26 PM: INFO: --------------------search a valid item---------------------
+082524 11 21 26 PM: INFO: test_valid_search_item
+082524 11 21 34 PM: DEBUG: item name['Cap'] is searched
+082524 11 21 34 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+082524 11 21 36 PM: INFO: User is logged in.

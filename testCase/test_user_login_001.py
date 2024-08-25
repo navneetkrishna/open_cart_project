@@ -3,13 +3,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 from selenium.webdriver.support.ui import WebDriverWait
 from utilities import read_properties
-from utilities.custom_logger import LogGen
 from pages import my_account, ecommerce_homepage
 
 
 class TestUserLogin:
-    # For logging
-    logger = LogGen.loggen()
 
     # Fixture > scope = function > executed before each function
     # Fixture > autouse = True > executed before each function automatically (without needing to explicitly pass it as an argument.)
@@ -21,28 +18,30 @@ class TestUserLogin:
         url = read_properties.ReadConfig.get_application_URL()
         self.driver.get(url)
         self.driver.maximize_window()
-        self.logger.info(f'Loading URL: {url} and launching browser')
+        # self.logger.info(f'Loading URL: {url} and launching browser')
 
         # Navigate to home page > my account
         home_page = ecommerce_homepage.HomePage(self.driver)
-        self.logger.debug('Homepage object created')
+        # self.logger.debug('Homepage object created')
 
         home_page.click_my_account()
 
     # Login with invalid email
     @pytest.mark.negative
-    def test_invalid_login_invalid_email(self):
-        self.logger.info('--------------------invalid login---------------------')
-        self.logger.info('test_invalid_login_invalid_email')
+    def test_invalid_login_invalid_email(self, driver, logger):
+        logger.info('--------------------invalid login---------------------')
+        logger.info('test_invalid_login_invalid_email')
+
+        self.driver = driver
 
         # User login process
         my_account_page = my_account.Login(self.driver)
-        self.logger.debug('My Account page object created')
+        logger.debug('My Account page object created')
 
         # Providing invalid username & password
         email = 'username@invalid.com'
         password = 'invalid@pass'
-        self.logger.debug(f'*Invalid email: {email} and password:{password} used*')
+        logger.debug(f'*Invalid email: {email} and password:{password} used*')
 
         my_account_page.enter_username(email)
         my_account_page.enter_password(password)
@@ -56,28 +55,30 @@ class TestUserLogin:
             expected_error = "Unknown email address. Check again or try your username."
             assert msg_text.text == expected_error
 
-            self.logger.debug(f'Invalid Login, User: {email} is invalid.')
-            self.logger.info('Test case has been executed successfully, test result: PASS')
+            logger.debug(f'Invalid Login, User: {email} is invalid.')
+            logger.info('Test case has been executed successfully, test result: PASS')
 
         except Exception as e:
-            self.logger.error(f'Login with invalid login credentials: {e}')
-            self.logger.info('Test case has been executed successfully, test result: FAIL')
+            logger.error(f'Login with invalid login credentials: {e}')
+            logger.info('Test case has been executed successfully, test result: FAIL')
             raise
 
     # Login with invalid username
     @pytest.mark.negative
-    def test_invalid_login_invalid_username(self):
-        self.logger.info('--------------------invalid login---------------------')
-        self.logger.info('test_invalid_login_invalid_username')
+    def test_invalid_login_invalid_username(self, driver, logger):
+        logger.info('--------------------invalid login---------------------')
+        logger.info('test_invalid_login_invalid_username')
+
+        self.driver = driver
 
         # User login process
         my_account_page = my_account.Login(self.driver)
-        self.logger.debug('My Account page object created')
+        logger.debug('My Account page object created')
 
         # Providing invalid username & password
         user_name = 'I_am_Invalid_User'
         password = 'I_am_Invalid_User'
-        self.logger.debug(f'*Invalid username: {user_name} and password:{password} used*')
+        logger.debug(f'*Invalid username: {user_name} and password:{password} used*')
 
         my_account_page.enter_username(user_name)
         my_account_page.enter_password(password)
@@ -92,28 +93,30 @@ class TestUserLogin:
                               f"your username, try your email address instead.")
             assert msg_text.text == expected_error
 
-            self.logger.debug(f'Invalid Login, User: {user_name} is invalid.')
-            self.logger.info('Test case has been executed successfully, test result: PASS')
+            logger.debug(f'Invalid Login, User: {user_name} is invalid.')
+            logger.info('Test case has been executed successfully, test result: PASS')
 
         except Exception as e:
-            self.logger.error(f'Login with invalid login credentials: {e}')
-            self.logger.info('Test case has been executed successfully, test result: FAIL')
+            logger.error(f'Login with invalid login credentials: {e}')
+            logger.info('Test case has been executed successfully, test result: FAIL')
             raise
 
     # Login with empty username
     @pytest.mark.negative
-    def test_invalid_login_empty_username(self):
-        self.logger.info('--------------------invalid login---------------------')
-        self.logger.info('test_invalid_login_empty_username')
+    def test_invalid_login_empty_username(self, driver, logger):
+        logger.info('--------------------invalid login---------------------')
+        logger.info('test_invalid_login_empty_username')
+
+        self.driver = driver
 
         # User login process
         my_account_page = my_account.Login(self.driver)
-        self.logger.debug('My Account page object created')
+        logger.debug('My Account page object created')
 
         # Providing empty username & password
         user_name = ''
         password = ''
-        self.logger.debug(f'*Empty username and password used*')
+        logger.debug(f'*Empty username and password used*')
 
         my_account_page.enter_username(user_name)
         my_account_page.enter_password(password)
@@ -127,28 +130,30 @@ class TestUserLogin:
             expected_error = "Error: Username is required."
             assert msg_text.text == expected_error
 
-            self.logger.debug('Invalid Login, Username is empty.')
-            self.logger.info('Test case has been executed successfully, test result: PASS')
+            logger.debug('Invalid Login, Username is empty.')
+            logger.info('Test case has been executed successfully, test result: PASS')
 
         except Exception as e:
-            self.logger.error(f'Login with empty username: {e}')
-            self.logger.info('Test case has been executed successfully, test result: FAIL')
+            logger.error(f'Login with empty username: {e}')
+            logger.info('Test case has been executed successfully, test result: FAIL')
             raise
 
     # Login with empty password
     @pytest.mark.negative
-    def test_invalid_login_empty_password(self):
-        self.logger.info('--------------------invalid login---------------------')
-        self.logger.info('test_invalid_login_empty_password')
+    def test_invalid_login_empty_password(self, driver, logger):
+        logger.info('--------------------invalid login---------------------')
+        logger.info('test_invalid_login_empty_password')
+
+        self.driver = driver
 
         # User login process
         my_account_page = my_account.Login(self.driver)
-        self.logger.debug('My Account page object created')
+        logger.debug('My Account page object created')
 
         # Providing empty password with valid username
         user_name = read_properties.ReadConfig.get_username()
         password = ''
-        self.logger.debug(f'*Valid username: {user_name} and blank password used*')
+        logger.debug(f'*Valid username: {user_name} and blank password used*')
 
         my_account_page.enter_username(user_name)
         my_account_page.enter_password(password)
@@ -162,27 +167,30 @@ class TestUserLogin:
             expected_error = "Error: The password field is empty."
             assert msg_text.text == expected_error
 
-            self.logger.debug('Invalid Login, password is blank.')
-            self.logger.info('Test case has been executed successfully, test result: PASS')
+            logger.debug('Invalid Login, password is blank.')
+            logger.info('Test case has been executed successfully, test result: PASS')
 
         except Exception as e:
-            self.logger.error(f'Login with empty password: {e}')
-            self.logger.info('Test case has been executed successfully, test result: FAIL')
+            logger.error(f'Login with empty password: {e}')
+            logger.info('Test case has been executed successfully, test result: FAIL')
             raise
 
     # Login with valid credentials
     @pytest.mark.smoke
-    def test_valid_user_login(self):
-        self.logger.info('--------------------valid login---------------------')
-        self.logger.info('Executing test case ID: test_valid_user_login')
+    def test_valid_user_login(self, driver, logger):
+
+        logger.info('--------------------valid login---------------------')
+        logger.info('Executing test case ID: test_valid_user_login')
+
+        self.driver = driver
 
         # User login process
         my_account_page = my_account.Login(self.driver)
-        self.logger.debug('My Account page object created')
+        logger.debug('My Account page object created')
 
         user_name = read_properties.ReadConfig.get_username()
         password = read_properties.ReadConfig.get_password()
-        self.logger.debug(f'*Read username: {user_name} and password from config.ini file*')
+        logger.debug(f'*Read username: {user_name} and password from config.ini file*')
 
         my_account_page.enter_username(user_name)
         my_account_page.enter_password(password)
@@ -195,10 +203,10 @@ class TestUserLogin:
             )
             assert recent_orders_link.text == "recent orders"
 
-            self.logger.debug(f'User: {user_name} has been logged in successfully')
-            self.logger.info('Test case has been executed successfully, test result: PASS')
+            logger.debug(f'User: {user_name} has been logged in successfully')
+            logger.info('Test case has been executed successfully, test result: PASS')
 
         except Exception as e:
-            self.logger.error(f'Login validation failed: {e}')
-            self.logger.info('Test case has been executed successfully, test result: FAIL')
+            logger.error(f'Login validation failed: {e}')
+            logger.info('Test case has been executed successfully, test result: FAIL')
             raise
