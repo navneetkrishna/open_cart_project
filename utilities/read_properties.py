@@ -1,8 +1,10 @@
 import configparser
 import os
+import random
 
 config = configparser.RawConfigParser()
-config.read(os.path.abspath(os.curdir)+'\\configurations\\config.ini')
+config.read(os.path.abspath(os.curdir) + '\\configurations\\config.ini')
+
 
 class ReadConfig:
     @staticmethod
@@ -33,3 +35,10 @@ class ReadConfig:
     def get_admin_password():
         password = config.get('adminInfo', 'password')
         return password
+
+    @staticmethod
+    def get_random_item_name():
+        item_list = ['Album', 'Beanie', 'Beanie with Logo', 'Cap', 'Belt', 'Sunglasses', 'Single', 'Hoodie with Logo',
+                     'Logo Collection', 'Polo', 'Long Sleeve Tee', 'V-Neck T-Shirt', 'V-Neck T-Shirt']
+
+        return random.choices(item_list)
