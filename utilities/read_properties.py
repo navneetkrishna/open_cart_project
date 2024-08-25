@@ -22,14 +22,13 @@ class ReadConfig:
         password = config.get('commonInfo', 'password')
         return password
 
-
-    # reading common info username
+    # reading admin info username
     @staticmethod
     def get_admin_username():
         username = config.get('adminInfo', 'username')
         return username
 
-    # reading common info password
+    # reading admin info password
     @staticmethod
     def get_admin_password():
         password = config.get('adminInfo', 'password')

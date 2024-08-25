@@ -25,10 +25,12 @@ class TestUserLogin:
 
         # Navigate to home page > my account
         home_page = ecommerce_homepage.HomePage(self.driver)
-        home_page.click_my_account()
         self.logger.debug('Homepage object created')
 
+        home_page.click_my_account()
+
     # Login with invalid email
+    @pytest.mark.negative
     def test_invalid_login_invalid_email(self):
         self.logger.info('--------------------invalid login---------------------')
         self.logger.info('test_invalid_login_invalid_email')
@@ -63,6 +65,7 @@ class TestUserLogin:
             raise
 
     # Login with invalid username
+    @pytest.mark.negative
     def test_invalid_login_invalid_username(self):
         self.logger.info('--------------------invalid login---------------------')
         self.logger.info('test_invalid_login_invalid_username')
@@ -98,6 +101,7 @@ class TestUserLogin:
             raise
 
     # Login with empty username
+    @pytest.mark.negative
     def test_invalid_login_empty_username(self):
         self.logger.info('--------------------invalid login---------------------')
         self.logger.info('test_invalid_login_empty_username')
@@ -132,6 +136,7 @@ class TestUserLogin:
             raise
 
     # Login with empty password
+    @pytest.mark.negative
     def test_invalid_login_empty_password(self):
         self.logger.info('--------------------invalid login---------------------')
         self.logger.info('test_invalid_login_empty_password')
@@ -166,6 +171,7 @@ class TestUserLogin:
             raise
 
     # Login with valid credentials
+    @pytest.mark.smoke
     def test_valid_user_login(self):
         self.logger.info('--------------------valid login---------------------')
         self.logger.info('Executing test case ID: test_valid_user_login')

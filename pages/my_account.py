@@ -25,11 +25,14 @@ class Registration:
         email_txtbox.send_keys(email)
 
     # password for new email is :Demo1234@
-    def enter_password(self):
-        password = 'Demo1234@'
+    def enter_password(self, password=None):
+        # Set password to default if not provided
+        if password is None:
+            password = 'Demo1234@'
+
+        # Find the password textbox and enter the password
         password_txtbox = self.driver.find_element(By.XPATH, self.password_txtbox_xpath)
         password_txtbox.send_keys(password)
-
     def click_register(self):
         self.driver.find_element(By.XPATH, self.register_button_xpath).click()
 
