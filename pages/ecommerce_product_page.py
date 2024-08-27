@@ -1,40 +1,43 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 
 
-class ShopPage:
-    # locators
+class ProductPage:
+    product_title_xpath = "//h1[contains(text(),'Logo Collection')]"
+    add_cart_btn_xpath = "//button[contains(text(),'Add to cart')]"
 
-    cart_btn_link_text = 'Cart'
-    checkout_btn_link_text = 'Checkout'
-    my_account_btn_link_text = 'My account'
-    sample_page_btn_link_text = 'Sample Page'
-    shop_btn_link_text = 'Shop'
-    search_box_xpath = "//input[@id='woocommerce-product-search-field-0']"
+    # locators of special products which requires addition data (color, size, quantity)
+
+    # item 1 > Logo Collection has 2 sub items (requires quantity before adding to cart)
+    # 1. Hoodie with Logo
+    # 2. T-shirt
+    hoodie_with_logo_qnty_txtbox_xpath = "//input[@id='quantity_66cc817198dd0']"
+    tshirt_qnty_txtbox_xpath = "//input[@id='quantity_66cc83a14801a']"
+
+    # item 2 > V-Neck T-Shirt > requires color and size selection before adding to cart
+
+    tshirt_color_dropdown_xpath = "//select[@id='pa_color']"
+    tshirt_size_dropdown_xpath = "//select[@id='pa_size']"
 
     # constructor
-
     def __init__(self, driver):
         self.driver = driver
 
     # define actions
 
-    def click_cart(self):
-        self.driver.find_element(By.LINK_TEXT, self.cart_btn_link_text).click()
+    def add_to_cart(self):
+        self.driver.find_element(By.XPATH, self.add_cart_btn_xpath).click()
 
-    def click_checkout(self):
-        self.driver.find_element(By.LINK_TEXT, self.checkout_btn_link_text).click()
+    def match_product(self, item):
+        title = self.driver.find_element(By.XPATH, self.product_title_xpath)
 
-    def click_my_account(self):
-        self.driver.find_element(By.LINK_TEXT, self.my_account_btn_link_text).click()
+        return title == item.text()
 
-    def click_sample_page(self):
-        self.driver.find_element(By.LINK_TEXT, self.sample_page_btn_link_text).click()
+    def select_hoodie_qnty(self, qnty):
+        h_qnty_box = self.driver.find_element(By.XPATH, self.hoodie_with_logo_qnty_txtbox_xpath)
+        h_qnty_box.clear()
+        h_qnty_box.sendKeys(qnty)
 
-    def click_shop(self):
-        self.driver.find_element(By.LINK_TEXT, self.shop_btn_link_text).click()
-
-    def search_product(self, search_keyword):
-        search_box = self.driver.find_element(By.XPATH, self.search_box_xpath)
-        search_box.send_keys(search_keyword)
-        search_box.send_keys(Keys.ENTER)
+    def select_tshirt_qnty(self, qnty):
+        t_qnty_box = self.driver.find_element(By.XPATH, self.tshirt_qnty_txtbox_xpath)
+        t_qnty_box.clear()
+        t_qnty_box.sendKeys(qnty)

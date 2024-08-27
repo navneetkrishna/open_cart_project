@@ -4,20 +4,10 @@ from selenium.webdriver.support.expected_conditions import presence_of_element_l
 from selenium.webdriver.support.wait import WebDriverWait
 
 from utilities import read_properties
-from pages import ecommerce_homepage, my_account
+from pages import ecommerce_home_page, ecommerce_my_account_page
 
 
 class TestLogOut:
-
-    @pytest.fixture(scope='function', autouse=True)
-    def setup(self, driver):
-
-        self.driver = driver
-
-        url = read_properties.ReadConfig.get_application_URL()
-        self.driver.get(url)
-        self.driver.maximize_window()
-
 
     @pytest.mark.smoke
     def test_logout(self, driver, logger):
@@ -25,21 +15,22 @@ class TestLogOut:
         self.driver = driver
         try:
             # Navigate to home page > my account
-            homepage = ecommerce_homepage.HomePage(self.driver)
+            homepage = ecommerce_home_page.HomePage(self.driver)
             homepage.click_my_account()
 
             # locate logout button
             account_link = WebDriverWait(driver, 10).until(
                 presence_of_element_located((By.XPATH, "(//a[contains(text(), 'Log out')])[1]")))
             logger.info("User is logged in.")
-
+            logger.info("Logging out...")
 
         except Exception as e:
             # If not logged in, you can log in or skip the test
             logger.error(f"User is not logged in, skipping the test.{e}")
             pytest.skip("User is not logged in.")
+
             raise
 
-        myaccount = my_account.Login(self.driver)
+        myaccount = ecommerce_my_account_page.Login(self.driver)
+        logger.debug("Logging out...")
         myaccount.click_logout()
-

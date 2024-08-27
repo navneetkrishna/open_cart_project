@@ -4,42 +4,24 @@ from selenium.webdriver.support.expected_conditions import presence_of_element_l
 from selenium.webdriver.support.wait import WebDriverWait
 from testCase.conftest import driver
 from utilities import read_properties, random_email_generator
-from pages import my_account, ecommerce_homepage
+from pages import ecommerce_my_account_page, ecommerce_home_page
 
 
 class TestNewUserRegistration:
-
-    # for logging
-    # logger = LogGen.loggen()
-
-    @pytest.fixture(scope="function", autouse=True)
-    def setup(self, driver):
-
-        # parameter driver is a fixture from conftest module
-        self.driver = driver
-        url = read_properties.ReadConfig.get_application_URL()
-        driver.get(url)
-        self.driver.maximize_window()
-        # self.logger.info(f'Loading URL: {url} and launching browser')
-        self.driver.maximize_window()
-
-        # Navigate to home page > my account
-        home_page = ecommerce_homepage.HomePage(self.driver)
-        # self.logger.debug('Homepage object created')
-
-        home_page.click_my_account()
-
-    # invalid registration > empty password
-    @pytest.mark.negative
+    @pytest.mark.smoke
     def test_invalid_register_user(self, driver, logger):
 
         logger.info(f'---------------------invalid registration--------------')
         logger.info(f'Executing test_invalid_register_user')
 
-        self.driver = driver
+        # Navigate to home page > my account
+        home_page = ecommerce_home_page.HomePage(driver)
+        # logger.debug('Homepage object created')
+
+        home_page.click_my_account()
 
         # User registration process
-        my_account_page = my_account.Registration(self.driver)
+        my_account_page = ecommerce_my_account_page.Registration(driver)
         logger.debug('My Account page object created')
 
         # Generate random email address
@@ -54,7 +36,7 @@ class TestNewUserRegistration:
 
         # Validating if the user has been registered successfully
         try:
-            error_txt = WebDriverWait(self.driver, 10).until(
+            error_txt = WebDriverWait(driver, 10).until(
                 presence_of_element_located((By.XPATH, "//body/div[@id='page']/div[@id='content']/div[1]/div[1]/ul[1]/li[1]"))
             )
 
@@ -77,10 +59,14 @@ class TestNewUserRegistration:
         logger.info(f'---------------------valid registration--------------')
         logger.info(f'Executing test_valid_register_user')
 
-        self.driver = driver
+        # Navigate to home page > my account
+        home_page = ecommerce_home_page.HomePage(driver)
+        # logger.debug('Homepage object created')
+
+        home_page.click_my_account()
 
         # User registration process
-        my_account_page = my_account.Registration(self.driver)
+        my_account_page = ecommerce_my_account_page.Registration(driver)
         logger.debug('My Account page object created')
 
         # Generate random email address
@@ -95,7 +81,7 @@ class TestNewUserRegistration:
 
         # Validating if the user has been registered successfully
         try:
-            recent_orders_link = WebDriverWait(self.driver, 10).until(
+            recent_orders_link = WebDriverWait(driver, 10).until(
                 presence_of_element_located((By.XPATH, "//a[contains(text(),'recent orders')]"))
             )
             assert recent_orders_link.text == "recent orders"
