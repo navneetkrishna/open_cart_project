@@ -38,9 +38,7 @@ class ReadConfig:
 
     @staticmethod
     def get_random_item_name():
-        # item_list = ['Album', 'Beanie with Logo', 'Cap', 'Belt', 'Sunglasses', 'Single', 'Hoodie with Logo',
-        #              'Logo Collection', 'Polo', 'Long Sleeve Tee', 'V-Neck T-Shirt']
-
-        item_list = ['V-Neck T-Shirt']
+        item_list = ['Album', 'Beanie with Logo', 'Cap', 'Belt', 'Sunglasses', 'Single', 'Hoodie with Logo',
+                     'Logo Collection', 'Polo', 'Long Sleeve Tee', 'V-Neck T-Shirt']
 
         return random.choices(item_list)

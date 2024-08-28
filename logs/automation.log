@@ -72,3 +72,24 @@
 082824 07 56 41 PM: INFO: User is logged in.
 082824 07 56 41 PM: INFO: Logging out...
 082824 07 56 41 PM: DEBUG: Logging out...
+082824 07 58 21 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
+082824 07 58 21 PM: INFO: --------------------valid login---------------------
+082824 07 58 21 PM: INFO: Executing test case ID: test_valid_user_login
+082824 07 58 23 PM: DEBUG: My Account page object created
+082824 07 58 23 PM: DEBUG: *Read username: demo12@gmail.com and password from config.ini file*
+082824 07 58 26 PM: DEBUG: User: demo12@gmail.com has been logged in successfully
+082824 07 58 26 PM: INFO: Test case has been executed successfully, test result: PASS
+082824 07 58 26 PM: INFO: --------------------search a valid item---------------------
+082824 07 58 26 PM: INFO: test_valid_search_item
+082824 07 58 32 PM: DEBUG: item name['Belt'] is searched
+082824 07 58 32 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+082824 07 58 32 PM: INFO: item: ['Belt']
+082824 07 58 32 PM: DEBUG: data type of item argument: <class 'list'>
+082824 07 58 32 PM: INFO: requested item to add to cart is: ['Belt']
+082824 07 58 32 PM: INFO: item text:Belt
+082824 07 58 32 PM: INFO: Requested item to add to cart: Belt
+082824 07 58 33 PM: INFO: Added item 'Belt' to cart successfully.
+082824 07 58 33 PM: INFO: test script execution complete; result: PASS
+082824 07 58 35 PM: INFO: User is logged in.
+082824 07 58 35 PM: INFO: Logging out...
+082824 07 58 35 PM: DEBUG: Logging out...
