@@ -1,40 +1,74 @@
-082724 07 34 15 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082724 07 34 15 PM: INFO: --------------------valid login---------------------
-082724 07 34 15 PM: INFO: Executing test case ID: test_valid_user_login
-082724 07 34 17 PM: DEBUG: My Account page object created
-082724 07 34 17 PM: DEBUG: *Read username: demo12@gmail.com and password from config.ini file*
-082724 07 34 20 PM: DEBUG: User: demo12@gmail.com has been logged in successfully
-082724 07 34 20 PM: INFO: Test case has been executed successfully, test result: PASS
-082724 07 34 22 PM: INFO: User is logged in.
-082724 07 38 14 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082724 07 38 14 PM: INFO: --------------------search an invalid item---------------------
-082724 07 38 14 PM: INFO: test_invalid_search_item
-082724 07 38 19 PM: DEBUG: Searched item nameinvalid_item is not available
-082724 07 38 19 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
-082724 07 38 19 PM: INFO: --------------------search a valid item---------------------
-082724 07 38 19 PM: INFO: test_valid_search_item
-082724 07 38 23 PM: DEBUG: item name['Long Sleeve Tee'] is searched
-082724 07 38 23 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
-082724 07 41 41 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082724 07 41 41 PM: INFO: ---------------------invalid registration--------------
-082724 07 41 41 PM: INFO: Executing test_invalid_register_user
-082724 07 41 41 PM: DEBUG: My Account page object created
-082724 07 41 41 PM: DEBUG: Registering user with email: 2vtb@outlook.us
-082724 07 41 41 PM: INFO: ---------------------valid registration--------------
-082724 07 41 41 PM: INFO: Executing test_valid_register_user
-082724 07 41 41 PM: DEBUG: My Account page object created
-082724 07 41 41 PM: DEBUG: Registering user with email: bn93z-4h0@outlook.us
-082724 07 42 38 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-082724 07 42 38 PM: INFO: ---------------------invalid registration--------------
-082724 07 42 38 PM: INFO: Executing test_invalid_register_user
-082724 07 42 39 PM: DEBUG: My Account page object created
-082724 07 42 39 PM: DEBUG: Registering user with email: zjpclc6zgnoj2@hotmail.com
-082724 07 42 41 PM: DEBUG: Invalid user registration, no password found for zjpclc6zgnoj2@hotmail.com
-082724 07 42 41 PM: INFO: test case ID:testCase.test_user_registration_001 has been executed successfully, test result: PASS
-082724 07 42 41 PM: INFO: ---------------------valid registration--------------
-082724 07 42 41 PM: INFO: Executing test_valid_register_user
-082724 07 42 42 PM: DEBUG: My Account page object created
-082724 07 42 42 PM: DEBUG: Registering user with email: zuo.cn7xrq@hotmail.net
-082724 07 42 50 PM: DEBUG: Email zuo.cn7xrq@hotmail.net has been registered
-082724 07 42 50 PM: DEBUG: User registration validated successfully
-082724 07 42 50 PM: INFO: test case ID:testCase.test_user_registration_001 has been executed successfully, test result: PASS
+082824 07 34 55 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
+082824 07 34 55 PM: INFO: --------------------search a valid item---------------------
+082824 07 34 55 PM: INFO: test_valid_search_item
+082824 07 35 00 PM: DEBUG: item name['V-Neck T-Shirt'] is searched
+082824 07 35 00 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+082824 07 35 00 PM: INFO: item: ['V-Neck T-Shirt']
+082824 07 35 00 PM: DEBUG: data type of item argument: <class 'list'>
+082824 07 35 00 PM: INFO: requested item to add to cart is: ['V-Neck T-Shirt']
+082824 07 35 00 PM: INFO: item text:V-Neck T-Shirt
+082824 07 35 27 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
+082824 07 35 27 PM: INFO: --------------------search a valid item---------------------
+082824 07 35 27 PM: INFO: test_valid_search_item
+082824 07 35 32 PM: DEBUG: item name['V-Neck T-Shirt'] is searched
+082824 07 35 32 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+082824 07 35 32 PM: INFO: item: ['V-Neck T-Shirt']
+082824 07 35 32 PM: DEBUG: data type of item argument: <class 'list'>
+082824 07 35 32 PM: INFO: requested item to add to cart is: ['V-Neck T-Shirt']
+082824 07 35 32 PM: INFO: item text:V-Neck T-Shirt
+082824 07 38 06 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
+082824 07 38 06 PM: INFO: --------------------search a valid item---------------------
+082824 07 38 06 PM: INFO: test_valid_search_item
+082824 07 38 11 PM: DEBUG: item name['V-Neck T-Shirt'] is searched
+082824 07 38 11 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+082824 07 38 11 PM: INFO: item: ['V-Neck T-Shirt']
+082824 07 38 11 PM: DEBUG: data type of item argument: <class 'list'>
+082824 07 38 11 PM: INFO: requested item to add to cart is: ['V-Neck T-Shirt']
+082824 07 38 11 PM: INFO: item text:V-Neck T-Shirt
+082824 07 40 20 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
+082824 07 40 20 PM: INFO: --------------------search a valid item---------------------
+082824 07 40 20 PM: INFO: test_valid_search_item
+082824 07 40 25 PM: DEBUG: item name['V-Neck T-Shirt'] is searched
+082824 07 40 25 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+082824 07 40 25 PM: INFO: item: ['V-Neck T-Shirt']
+082824 07 40 25 PM: DEBUG: data type of item argument: <class 'list'>
+082824 07 40 25 PM: INFO: requested item to add to cart is: ['V-Neck T-Shirt']
+082824 07 40 25 PM: INFO: item text:V-Neck T-Shirt
+082824 07 42 09 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
+082824 07 42 09 PM: INFO: --------------------search a valid item---------------------
+082824 07 42 09 PM: INFO: test_valid_search_item
+082824 07 42 14 PM: DEBUG: item name['V-Neck T-Shirt'] is searched
+082824 07 42 14 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+082824 07 42 14 PM: INFO: item: ['V-Neck T-Shirt']
+082824 07 42 14 PM: DEBUG: data type of item argument: <class 'list'>
+082824 07 42 14 PM: INFO: requested item to add to cart is: ['V-Neck T-Shirt']
+082824 07 42 14 PM: INFO: item text:V-Neck T-Shirt
+082824 07 48 29 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
+082824 07 48 29 PM: INFO: --------------------search a valid item---------------------
+082824 07 48 29 PM: INFO: test_valid_search_item
+082824 07 48 34 PM: DEBUG: item name['V-Neck T-Shirt'] is searched
+082824 07 48 34 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+082824 07 48 34 PM: INFO: item: ['V-Neck T-Shirt']
+082824 07 48 34 PM: INFO: Requested item to add to cart: V-Neck T-Shirt
+082824 07 48 35 PM: INFO: Added item 'V-Neck T-Shirt' to cart successfully.
+082824 07 56 26 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
+082824 07 56 26 PM: INFO: --------------------valid login---------------------
+082824 07 56 26 PM: INFO: Executing test case ID: test_valid_user_login
+082824 07 56 28 PM: DEBUG: My Account page object created
+082824 07 56 28 PM: DEBUG: *Read username: demo12@gmail.com and password from config.ini file*
+082824 07 56 32 PM: DEBUG: User: demo12@gmail.com has been logged in successfully
+082824 07 56 32 PM: INFO: Test case has been executed successfully, test result: PASS
+082824 07 56 32 PM: INFO: --------------------search a valid item---------------------
+082824 07 56 32 PM: INFO: test_valid_search_item
+082824 07 56 37 PM: DEBUG: item name['V-Neck T-Shirt'] is searched
+082824 07 56 37 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+082824 07 56 37 PM: INFO: item: ['V-Neck T-Shirt']
+082824 07 56 37 PM: DEBUG: data type of item argument: <class 'list'>
+082824 07 56 37 PM: INFO: requested item to add to cart is: ['V-Neck T-Shirt']
+082824 07 56 37 PM: INFO: item text:V-Neck T-Shirt
+082824 07 56 37 PM: INFO: Requested item to add to cart: V-Neck T-Shirt
+082824 07 56 39 PM: INFO: Added item 'V-Neck T-Shirt' to cart successfully.
+082824 07 56 39 PM: INFO: test script execution complete; result: PASS
+082824 07 56 41 PM: INFO: User is logged in.
+082824 07 56 41 PM: INFO: Logging out...
+082824 07 56 41 PM: DEBUG: Logging out...
