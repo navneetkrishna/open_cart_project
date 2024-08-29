@@ -11,13 +11,11 @@ class TestUserLogin:
     # Login with invalid email
     @pytest.mark.negative
     def test_invalid_login_invalid_email(self, driver, logger):
+
         logger.info('--------------------invalid login---------------------')
         logger.info('test_invalid_login_invalid_email')
 
-        # Navigate to home page > my account
         home_page = ecommerce_home_page.HomePage(driver)
-        # logger.debug('Homepage object created')
-
         home_page.click_my_account()
 
         # User login process
@@ -33,7 +31,7 @@ class TestUserLogin:
         my_account_page.enter_password(password)
         my_account_page.click_login()
 
-        # Validating if the user has been logged in successfully
+        # Validating that the user has not been logged in
         try:
             msg_text = WebDriverWait(driver, 10).until(presence_of_element_located(
                 (By.XPATH, "//li[contains(text(),'Unknown email address. Check again or try your username')]")
@@ -46,19 +44,17 @@ class TestUserLogin:
 
         except Exception as e:
             logger.error(f'Login with invalid login credentials: {e}')
-            logger.info('Test case has been executed successfully, test result: FAIL')
+            logger.info('Test case has been executed, test result: FAIL')
             raise
 
     # Login with invalid username
     @pytest.mark.negative
     def test_invalid_login_invalid_username(self, driver, logger):
+
         logger.info('--------------------invalid login---------------------')
         logger.info('test_invalid_login_invalid_username')
 
-        # Navigate to home page > my account
         home_page = ecommerce_home_page.HomePage(driver)
-        # logger.debug('Homepage object created')
-
         home_page.click_my_account()
 
         # User login process
@@ -74,7 +70,7 @@ class TestUserLogin:
         my_account_page.enter_password(password)
         my_account_page.click_login()
 
-        # Validating if the user has been logged in successfully
+        # Validating that the user has not been logged in
         try:
             msg_text = WebDriverWait(driver, 10).until(presence_of_element_located(
                 (By.XPATH, "//body/div[@id='page']/div[@id='content']/div[1]/div[1]/ul[1]/li[1]")
@@ -88,19 +84,17 @@ class TestUserLogin:
 
         except Exception as e:
             logger.error(f'Login with invalid login credentials: {e}')
-            logger.info('Test case has been executed successfully, test result: FAIL')
+            logger.info('Test case has been executed, test result: FAIL')
             raise
 
     # Login with empty username
     @pytest.mark.negative
     def test_invalid_login_empty_username(self, driver, logger):
+
         logger.info('--------------------invalid login---------------------')
         logger.info('test_invalid_login_empty_username')
 
-        # Navigate to home page > my account
         home_page = ecommerce_home_page.HomePage(driver)
-        # logger.debug('Homepage object created')
-
         home_page.click_my_account()
 
         # User login process
@@ -116,7 +110,7 @@ class TestUserLogin:
         my_account_page.enter_password(password)
         my_account_page.click_login()
 
-        # Validating if the user has been logged in successfully
+        # Validating that the user has not been logged in
         try:
             msg_text = WebDriverWait(driver, 10).until(presence_of_element_located(
                 (By.XPATH, "//body/div[@id='page']/div[@id='content']/div[1]/div[1]/ul[1]/li[1]")
@@ -129,19 +123,17 @@ class TestUserLogin:
 
         except Exception as e:
             logger.error(f'Login with empty username: {e}')
-            logger.info('Test case has been executed successfully, test result: FAIL')
+            logger.info('Test case has been executed, test result: FAIL')
             raise
 
     # Login with empty password
     @pytest.mark.negative
     def test_invalid_login_empty_password(self, driver, logger):
+
         logger.info('--------------------invalid login---------------------')
         logger.info('test_invalid_login_empty_password')
 
-        # Navigate to home page > my account
         home_page = ecommerce_home_page.HomePage(driver)
-        # logger.debug('Homepage object created')
-
         home_page.click_my_account()
 
         # User login process
@@ -157,7 +149,7 @@ class TestUserLogin:
         my_account_page.enter_password(password)
         my_account_page.click_login()
 
-        # Validating if the user has been logged in successfully
+        # Validating that the user has not been logged in
         try:
             msg_text = WebDriverWait(driver, 10).until(presence_of_element_located(
                 (By.XPATH, "//body/div[@id='page']/div[@id='content']/div[1]/div[1]/ul[1]/li[1]")
@@ -170,7 +162,7 @@ class TestUserLogin:
 
         except Exception as e:
             logger.error(f'Login with empty password: {e}')
-            logger.info('Test case has been executed successfully, test result: FAIL')
+            logger.info('Test case has been executed, test result: FAIL')
             raise
 
     # Login with valid credentials
@@ -180,10 +172,8 @@ class TestUserLogin:
         logger.info('--------------------valid login---------------------')
         logger.info('Executing test case ID: test_valid_user_login')
 
-        # Navigate to home page > my account
-        home_page = ecommerce_home_page.HomePage(driver)
-        # logger.debug('Homepage object created')
 
+        home_page = ecommerce_home_page.HomePage(driver)
         home_page.click_my_account()
 
         # User login process
@@ -210,5 +200,5 @@ class TestUserLogin:
 
         except Exception as e:
             logger.error(f'Login validation failed: {e}')
-            logger.info('Test case has been executed successfully, test result: FAIL')
+            logger.info('Test case has been executed, test result: FAIL')
             raise

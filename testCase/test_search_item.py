@@ -21,7 +21,10 @@ class TestSearchItem:
         homepage.search_product(item)
 
         try:
-            error_msg = WebDriverWait(driver, 10).until(presence_of_element_located((By.XPATH, "//div[contains(text(),'No products were found matching your selection.')]")))
+            error_msg = WebDriverWait(driver, 10).until(presence_of_element_located((By.XPATH, "//div[contains(text("
+                                                                                               "),'No products were "
+                                                                                               "found matching your "
+                                                                                               "selection.')]")))
 
             expected_error = 'No products were found matching your selection.'
             assert error_msg.text == expected_error
@@ -66,4 +69,3 @@ class TestSearchItem:
             raise
 
         return item
-

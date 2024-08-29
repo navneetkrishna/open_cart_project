@@ -42,3 +42,8 @@ class ReadConfig:
                      'Logo Collection', 'Polo', 'Long Sleeve Tee', 'V-Neck T-Shirt']
 
         return random.choices(item_list)
+
+    @staticmethod
+    def get_coupon(coupon="FREE"):
+
+        return coupon

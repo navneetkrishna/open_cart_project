@@ -64,7 +64,7 @@ class Login:
         password_txtbox.send_keys(password)
 
     def click_login(self):
-        login_btn = self.driver.find_element(By.XPATH, self.login_button_xpath).click()
+        self.driver.find_element(By.XPATH, self.login_button_xpath).click()
 
     def click_logout(self):
-        logout_btn = self.driver.find_element(By.XPATH, self.logout_button_xpath).click()
+        self.driver.find_element(By.XPATH, self.logout_button_xpath).click()

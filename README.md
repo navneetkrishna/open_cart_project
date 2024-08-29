@@ -26,7 +26,7 @@ This project contains a suite of automation tests designed to test the functiona
 
 # ✏️ Installation and setup 🖥️
 
-- install and configure Python 3
+- install and configure Python 3 (refer [requirement.txt](requirements.txt))
 
 - setup your IDE
 
@@ -36,7 +36,8 @@ This project contains a suite of automation tests designed to test the functiona
 
 - install pytest
 
-- to run tests, use tests.py
+- to run tests, use ecommerce_flow.py
+
 
 
 

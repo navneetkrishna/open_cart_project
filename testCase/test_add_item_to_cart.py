@@ -1,18 +1,11 @@
-import time
 import pytest
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.select import Select
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from pages import ecommerce_product_page
-from utilities import read_properties
+
 
 class TestAddItemToCart:
 
-    @pytest.mark.demo
+    @pytest.mark.smoke
     def test_add_item_to_cart(self, driver, logger, item):
-
-        # Handle item parameter
 
         # a list argument 'item' will be passed to the function
 
@@ -46,3 +39,5 @@ class TestAddItemToCart:
             logger.error(f"could not add {item} to cart")
             logger.info(f"test script execution complete; result: FAIL")
             raise
+
+        return item

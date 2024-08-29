@@ -16,8 +16,6 @@ class TestNewUserRegistration:
 
         # Navigate to home page > my account
         home_page = ecommerce_home_page.HomePage(driver)
-        # logger.debug('Homepage object created')
-
         home_page.click_my_account()
 
         # User registration process
@@ -32,9 +30,7 @@ class TestNewUserRegistration:
         # my_account_page.enter_password()
         my_account_page.click_register()
 
-        # logger.debug(f'Email {email} has been registered')
-
-        # Validating if the user has been registered successfully
+        # Validating that the user has not been registered
         try:
             error_txt = WebDriverWait(driver, 10).until(
                 presence_of_element_located((By.XPATH, "//body/div[@id='page']/div[@id='content']/div[1]/div[1]/ul[1]/li[1]"))

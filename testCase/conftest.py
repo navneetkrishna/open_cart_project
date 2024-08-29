@@ -41,9 +41,9 @@ def pytest_addoption(parser):
                      default="chrome",
                      help="Browser to run tests with, e.g., chrome or edge")
 
+
 @pytest.fixture(scope='session')
 def logger():
-
     logger = LogGen.loggen()
 
     yield logger
