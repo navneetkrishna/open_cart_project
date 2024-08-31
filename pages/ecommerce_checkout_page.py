@@ -14,7 +14,7 @@ class CheckoutPage:
     cod_btn_xpath = "//span[contains(text(),'Cash on delivery')]"
     place_order_btn_xpath = "//div/button/span[contains(text(), 'Place Order')]"
     coupon_applied_xpath = "//div[contains(text(),'Coupon code applied successfully.')]"
-    empty_cart_text_xpath = "//h2[contains(text(),'Your cart is currently empty!')]"
+    cart_empty_text_xpath = "//h2[contains(text(),'Your cart is currently empty!')]"
 
     login_status_xpath = "//a[contains(text(),'Log in')]"
 
@@ -26,11 +26,16 @@ class CheckoutPage:
 
         # actions
 
-    def ckick_display_coupon_btn(self):
+    def click_display_coupon_btn(self):
 
-        # self.driver.find_element(By.XPATH, self.displayCoupon_btn_xpath).click()
-        coupon_display = self.wait.until(EC.visibility_of_element_located((By.XPATH, self.displayCoupon_btn_xpath)))
-        coupon_display.click()
+        try:
+            coupon_display = self.wait.until(
+                EC.visibility_of_element_located((By.XPATH, self.displayCoupon_btn_xpath)))
+            coupon_display.click()
+
+        except TimeoutException as e:
+
+            raise Exception(f"Failed to click display coupon button: {e}")
 
     def apply_coupon(self):
 
@@ -52,13 +57,6 @@ class CheckoutPage:
 
     def place_order(self):
 
-        # Ensure that coupon is applied
-        # self.wait.until(EC.visibility_of_element_located((By.XPATH, self.coupon_applied_xpath)))
-        # click 'Place Order' button
-
-        # in case of no coupon before placing the order, select COD option
-        # self.driver.find_element(By.XPATH, self.cod_btn_xpath).click()
-
         try:
             self.wait.until(EC.visibility_of_element_located((By.XPATH, self.place_order_btn_xpath))).click()
 
@@ -68,7 +66,7 @@ class CheckoutPage:
     def is_cart_empty(self):
 
         try:
-            self.wait.until(EC.presence_of_element_located((By.XPATH, self.empty_cart_text_xpath)))
+            self.wait.until(EC.presence_of_element_located((By.XPATH, self.cart_empty_text_xpath)))
 
             return True
 

@@ -39,25 +39,33 @@ class TestCheckout:
             # once item is added to cart, move to checkout page
             homepage.click_checkout()
 
+        # in case cart is not empty proceed to checkout
         logger.info("cart not empty")
-        checkout_page.ckick_display_coupon_btn()
-        checkout_page.apply_coupon()
-        logger.info("coupon applied")
 
+        # before checkout, ensure that user is logged in
         if checkout_page.is_user_logged_in() is False:
+
+            # User is not logged in, calling the login method
+            logger.info("User is not logged in, calling the login method")
             login.test_valid_user_login(driver, logger)
 
             # redirect to check out page
             homepage.click_checkout()
 
+        checkout_page.click_display_coupon_btn()
+        checkout_page.apply_coupon()
+        logger.info("coupon applied")
+
         try:
+
             checkout_page.place_order()
             logger.info("order placed clicked")
 
             expected_msg = "Order received"
 
             order_success = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//h1[contains(text(),'Order received')]")))
-            logger.info(order_success, order_success.text)
+            logger.info(f"-----order success type: {type(order_success)}")
+            logger.info(f"-----order success test: {order_success.text}")
             assert order_success.text == expected_msg
             logger.info("order placed")
 
