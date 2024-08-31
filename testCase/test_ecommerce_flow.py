@@ -1,7 +1,7 @@
 import pytest
 import pdb
 from pages import ecommerce_home_page
-from testCase import test_search_item, test_user_login_001, test_logout, test_add_item_to_cart, test_checkout
+from testCase import test_search_item, test_user_login_001, test_logout_001, test_add_item_to_cart, test_checkout
 from utilities import read_properties
 
 
