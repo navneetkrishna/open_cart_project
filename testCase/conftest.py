@@ -2,6 +2,8 @@ import pytest
 from selenium import webdriver
 from utilities import read_properties
 from utilities.custom_logger import LogGen
+import os
+from datetime import datetime
 
 
 # session-level scope ensures one driver per test session
@@ -64,3 +66,22 @@ def setup(driver, logger):
 # explicitly requested by a test method.
 # This means that as soon as the session starts, the setup fixture will run,
 # and the driver and logger will be set up and available for the duration of the session.
+
+
+# report generator hooks
+def pytest_configure(config):
+    config._metadata['Project Name'] = 'Opencart'
+    config._metadata['Module Name'] = 'Ecommerce'
+    config._metadata['Tester'] = 'Navneet K'
+
+
+# pop unnecessary data from the report
+def pytest_metadata(metadata):
+    metadata.pop('JAVA_HOME', None)
+    metadata.pop('Plugins', None)
+
+@pytest.hookimpl(tryfirst=True)
+def pytest_configure(config):
+    config.option.htmlpath = os.path.abspath(os.curdir) + "\\reports\\" + datetime.now().strftime("%d-%m-%Y %H-%M-%S") + ".html"
+
+

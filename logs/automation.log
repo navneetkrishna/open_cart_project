@@ -29,3 +29,84 @@
 083124 05 27 02 PM: INFO: checkout successful
 083124 05 27 03 PM: INFO: User is already logged in.
 083124 05 27 03 PM: DEBUG: Logging out...
+092224 07 16 55 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
+092224 07 16 55 PM: INFO: --------------------valid login---------------------
+092224 07 16 55 PM: INFO: Executing test case ID: test_valid_user_login
+092224 07 16 57 PM: DEBUG: My Account page object created
+092224 07 16 57 PM: DEBUG: *Read username: demo12@gmail.com and password from config.ini file*
+092224 07 17 00 PM: DEBUG: User: demo12@gmail.com has been logged in successfully
+092224 07 17 00 PM: INFO: Test case has been executed successfully, test result: PASS
+092224 07 17 00 PM: INFO: --------------------search a valid item---------------------
+092224 07 17 00 PM: INFO: test_valid_search_item
+092224 07 17 05 PM: DEBUG: item name['Cap'] is searched
+092224 07 17 05 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+092224 07 17 05 PM: INFO: searched item: ['Cap']
+092224 07 17 05 PM: DEBUG: data type of item argument: <class 'list'>
+092224 07 17 05 PM: INFO: requested item to add to cart is: ['Cap']
+092224 07 17 05 PM: INFO: item text:Cap
+092224 07 17 05 PM: INFO: Requested item to add to cart: Cap
+092224 07 17 07 PM: INFO: Added item 'Cap' to cart successfully.
+092224 07 17 07 PM: INFO: test script execution complete; result: PASS
+092224 07 17 07 PM: INFO: item added to cart:Cap
+092224 07 17 07 PM: INFO: execution -------------testCase.test_checkout------------
+092224 07 17 07 PM: INFO: navigate to checkout page
+092224 07 17 22 PM: INFO: cart not empty
+092224 07 17 32 PM: INFO: coupon applied
+092224 07 17 32 PM: INFO: order placed clicked
+092224 07 17 43 PM: ERROR: Order not placed, issue in checkoutMessage: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF635119412+29090]
+	(No symbol) [0x00007FF63508E239]
+	(No symbol) [0x00007FF634F4B1DA]
+	(No symbol) [0x00007FF634F9EFE7]
+	(No symbol) [0x00007FF634F9F23C]
+	(No symbol) [0x00007FF634FE97C7]
+	(No symbol) [0x00007FF634FC672F]
+	(No symbol) [0x00007FF634FE65A2]
+	(No symbol) [0x00007FF634FC6493]
+	(No symbol) [0x00007FF634F909D1]
+	(No symbol) [0x00007FF634F91B31]
+	GetHandleVerifier [0x00007FF63543871D+3302573]
+	GetHandleVerifier [0x00007FF635484243+3612627]
+	GetHandleVerifier [0x00007FF63547A417+3572135]
+	GetHandleVerifier [0x00007FF6351D5EB6+801862]
+	(No symbol) [0x00007FF63509945F]
+	(No symbol) [0x00007FF635094FB4]
+	(No symbol) [0x00007FF635095140]
+	(No symbol) [0x00007FF63508461F]
+	BaseThreadInitThunk [0x00007FFC0372257D+29]
+	RtlUserThreadStart [0x00007FFC0480AF28+40]
+
+092224 07 17 43 PM: INFO: checkout successful
+092224 07 17 44 PM: INFO: User is already logged in.
+092224 07 17 44 PM: DEBUG: Logging out...
+092224 07 27 13 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
+092224 07 27 13 PM: INFO: --------------------valid login---------------------
+092224 07 27 13 PM: INFO: Executing test case ID: test_valid_user_login
+092224 07 27 15 PM: DEBUG: My Account page object created
+092224 07 27 15 PM: DEBUG: *Read username: demo12@gmail.com and password from config.ini file*
+092224 07 27 18 PM: DEBUG: User: demo12@gmail.com has been logged in successfully
+092224 07 27 18 PM: INFO: Test case has been executed successfully, test result: PASS
+092224 07 27 18 PM: INFO: --------------------search a valid item---------------------
+092224 07 27 18 PM: INFO: test_valid_search_item
+092224 07 27 22 PM: DEBUG: item name['Logo Collection'] is searched
+092224 07 27 22 PM: INFO: testCase.test_search_item successfully executed, test result: Pass
+092224 07 27 22 PM: INFO: searched item: ['Logo Collection']
+092224 07 27 22 PM: DEBUG: data type of item argument: <class 'list'>
+092224 07 27 22 PM: INFO: requested item to add to cart is: ['Logo Collection']
+092224 07 27 22 PM: INFO: item text:Logo Collection
+092224 07 27 22 PM: INFO: Requested item to add to cart: Logo Collection
+092224 07 27 23 PM: INFO: Added item 'Logo Collection' to cart successfully.
+092224 07 27 23 PM: INFO: test script execution complete; result: PASS
+092224 07 27 23 PM: INFO: item added to cart:Logo Collection
+092224 07 27 23 PM: INFO: execution -------------testCase.test_checkout------------
+092224 07 27 23 PM: INFO: navigate to checkout page
+092224 07 27 35 PM: INFO: cart not empty
+092224 07 27 46 PM: INFO: coupon applied
+092224 07 27 46 PM: INFO: order placed clicked
+092224 07 27 55 PM: INFO: -----order success type: <class 'selenium.webdriver.remote.webelement.WebElement'>
+092224 07 27 55 PM: INFO: -----order success test: Order received
+092224 07 27 55 PM: INFO: order placed
+092224 07 27 55 PM: INFO: checkout successful
+092224 07 27 56 PM: INFO: User is already logged in.
+092224 07 27 56 PM: DEBUG: Logging out...
