@@ -1,8 +1,20 @@
+import os
 import pytest
 from pages import ecommerce_product_page
+import inspect
 
 
 class TestAddItemToCart:
+
+    def screenshot_filename(self):
+        # To get the current test method name
+        # Stack > ParentMethod > ChildMethod
+
+        stack = inspect.stack()
+        # stack [0] = child, stack[1] = parent
+        screenshot_filename = stack[1].function
+
+        return screenshot_filename
 
     @pytest.mark.smoke
     def test_add_item_to_cart(self, driver, logger, item):
@@ -36,6 +48,10 @@ class TestAddItemToCart:
             logger.info(f"test script execution complete; result: PASS")
 
         except Exception as e:
+
+            # Save the screenshot
+            driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + f"{self.screenshot_filename()}.png")
+
             logger.error(f"could not add {item} to cart")
             logger.info(f"test script execution complete; result: FAIL")
             raise

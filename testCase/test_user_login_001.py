@@ -1,4 +1,4 @@
-import pytest
+import pytest, os, inspect
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 from selenium.webdriver.support.ui import WebDriverWait
@@ -7,6 +7,16 @@ from pages import ecommerce_my_account_page, ecommerce_home_page
 
 
 class TestUserLogin:
+
+    def screenshot_filename(self):
+        # To get the current test method name
+        # Stack > ParentMethod > ChildMethod
+
+        stack = inspect.stack()
+        # stack [0] = child, stack[1] = parent
+        screenshot_filename = stack[1].function
+
+        return screenshot_filename
 
     # Login with invalid email
     @pytest.mark.negative
@@ -43,6 +53,10 @@ class TestUserLogin:
             logger.info('Test case has been executed successfully, test result: PASS')
 
         except Exception as e:
+
+            # Save the screenshot
+            driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + f"{self.screenshot_filename()}.png")
+
             logger.error(f'Login with invalid login credentials: {e}')
             logger.info('Test case has been executed, test result: FAIL')
             raise
@@ -83,6 +97,10 @@ class TestUserLogin:
             logger.info('Test case has been executed successfully, test result: PASS')
 
         except Exception as e:
+
+            # Save the screenshot
+            driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + f"{self.screenshot_filename()}.png")
+
             logger.error(f'Login with invalid login credentials: {e}')
             logger.info('Test case has been executed, test result: FAIL')
             raise
@@ -122,6 +140,10 @@ class TestUserLogin:
             logger.info('Test case has been executed successfully, test result: PASS')
 
         except Exception as e:
+
+            # Save the screenshot
+            driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + f"{self.screenshot_filename()}.png")
+
             logger.error(f'Login with empty username: {e}')
             logger.info('Test case has been executed, test result: FAIL')
             raise
@@ -161,6 +183,10 @@ class TestUserLogin:
             logger.info('Test case has been executed successfully, test result: PASS')
 
         except Exception as e:
+
+            # Save the screenshot
+            driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + f"{self.screenshot_filename()}.png")
+
             logger.error(f'Login with empty password: {e}')
             logger.info('Test case has been executed, test result: FAIL')
             raise
@@ -199,6 +225,10 @@ class TestUserLogin:
             logger.info('Test case has been executed successfully, test result: PASS')
 
         except Exception as e:
+
+            # Save the screenshot
+            driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + f"{self.screenshot_filename()}.png")
+
             logger.error(f'Login validation failed: {e}')
             logger.info('Test case has been executed, test result: FAIL')
             raise

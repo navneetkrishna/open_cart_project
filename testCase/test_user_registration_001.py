@@ -1,4 +1,4 @@
-import pytest
+import pytest, os, inspect
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 from selenium.webdriver.support.wait import WebDriverWait
@@ -8,6 +8,17 @@ from pages import ecommerce_my_account_page, ecommerce_home_page
 
 
 class TestNewUserRegistration:
+
+    def screenshot_filename(self):
+        # To get the current test method name
+        # Stack > ParentMethod > ChildMethod
+
+        stack = inspect.stack()
+        # stack [0] = child, stack[1] = parent
+        screenshot_filename = stack[1].function
+
+        return screenshot_filename
+
     @pytest.mark.smoke
     def test_invalid_register_user(self, driver, logger):
 
@@ -43,6 +54,10 @@ class TestNewUserRegistration:
             logger.info(f'test case ID:{__name__} has been executed successfully, test result: PASS')
 
         except Exception as e:
+
+            # Save the screenshot
+            driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + f"{self.screenshot_filename()}.png")
+
             logger.error(f'Invalid user registration, user {email} registered without password, {e}')
             logger.info(f'test case ID:{__name__} has been executed successfully, test result: FAIL')
 
@@ -85,6 +100,10 @@ class TestNewUserRegistration:
             logger.info(f'test case ID:{__name__} has been executed successfully, test result: PASS')
 
         except Exception as e:
+
+            # Save the screenshot
+            driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + f"{self.screenshot_filename()}.png")
+
             logger.error(f'Registration validation failed: {e}')
             logger.info(f'test case ID:{__name__} has been executed successfully, test result: FAIL')
 

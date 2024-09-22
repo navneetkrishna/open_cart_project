@@ -2,12 +2,22 @@ from selenium.common import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import pytest
+import pytest, os, inspect
 from pages import ecommerce_checkout_page, ecommerce_home_page
 from testCase import test_user_login_001, test_add_item_to_cart, test_search_item
 
 
 class TestCheckout:
+
+    def screenshot_filename(self):
+        # To get the current test method name
+        # Stack > ParentMethod > ChildMethod
+
+        stack = inspect.stack()
+        # stack [0] = child, stack[1] = parent
+        screenshot_filename = stack[1].function
+
+        return screenshot_filename
 
     @pytest.mark.smoke
     def test_checkout(self, driver, logger):
@@ -68,4 +78,8 @@ class TestCheckout:
             logger.info("order placed")
 
         except TimeoutException as e:
+
+            # Save the screenshot
+            driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + f"{self.screenshot_filename()}.png")
+
             logger.error(f"Order not placed, issue in checkout{e}")
