@@ -1,191 +1,21 @@
-092224 07 47 13 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-092224 07 47 13 PM: INFO: --------------------valid login---------------------
-092224 07 47 13 PM: INFO: Executing test case ID: test_valid_user_login
-092224 07 47 15 PM: DEBUG: My Account page object created
-092224 07 47 15 PM: DEBUG: *Read username: demo123@gmail.com and password from config.ini file*
-092224 07 47 28 PM: INFO: screenshot captured at: E:\Projects\open_cart_project\screenshots\
-092224 07 47 28 PM: ERROR: Login validation failed: Message: 
-Stacktrace:
-	GetHandleVerifier [0x00007FF635119412+29090]
-	(No symbol) [0x00007FF63508E239]
-	(No symbol) [0x00007FF634F4B1DA]
-	(No symbol) [0x00007FF634F9EFE7]
-	(No symbol) [0x00007FF634F9F23C]
-	(No symbol) [0x00007FF634FE97C7]
-	(No symbol) [0x00007FF634FC672F]
-	(No symbol) [0x00007FF634FE65A2]
-	(No symbol) [0x00007FF634FC6493]
-	(No symbol) [0x00007FF634F909D1]
-	(No symbol) [0x00007FF634F91B31]
-	GetHandleVerifier [0x00007FF63543871D+3302573]
-	GetHandleVerifier [0x00007FF635484243+3612627]
-	GetHandleVerifier [0x00007FF63547A417+3572135]
-	GetHandleVerifier [0x00007FF6351D5EB6+801862]
-	(No symbol) [0x00007FF63509945F]
-	(No symbol) [0x00007FF635094FB4]
-	(No symbol) [0x00007FF635095140]
-	(No symbol) [0x00007FF63508461F]
-	BaseThreadInitThunk [0x00007FFC0372257D+29]
-	RtlUserThreadStart [0x00007FFC0480AF28+40]
-
-092224 07 47 28 PM: INFO: Test case has been executed, test result: FAIL
-092224 07 56 43 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-092224 07 56 43 PM: INFO: --------------------valid login---------------------
-092224 07 56 43 PM: INFO: Executing test case ID: test_valid_user_login
-092224 07 56 46 PM: DEBUG: My Account page object created
-092224 07 56 46 PM: DEBUG: *Read username: demo123@gmail.com and password from config.ini file*
-092224 07 57 01 PM: ERROR: Login validation failed: Message: 
-Stacktrace:
-	GetHandleVerifier [0x00007FF635119412+29090]
-	(No symbol) [0x00007FF63508E239]
-	(No symbol) [0x00007FF634F4B1DA]
-	(No symbol) [0x00007FF634F9EFE7]
-	(No symbol) [0x00007FF634F9F23C]
-	(No symbol) [0x00007FF634FE97C7]
-	(No symbol) [0x00007FF634FC672F]
-	(No symbol) [0x00007FF634FE65A2]
-	(No symbol) [0x00007FF634FC6493]
-	(No symbol) [0x00007FF634F909D1]
-	(No symbol) [0x00007FF634F91B31]
-	GetHandleVerifier [0x00007FF63543871D+3302573]
-	GetHandleVerifier [0x00007FF635484243+3612627]
-	GetHandleVerifier [0x00007FF63547A417+3572135]
-	GetHandleVerifier [0x00007FF6351D5EB6+801862]
-	(No symbol) [0x00007FF63509945F]
-	(No symbol) [0x00007FF635094FB4]
-	(No symbol) [0x00007FF635095140]
-	(No symbol) [0x00007FF63508461F]
-	BaseThreadInitThunk [0x00007FFC0372257D+29]
-	RtlUserThreadStart [0x00007FFC0480AF28+40]
-
-092224 07 57 01 PM: INFO: Test case has been executed, test result: FAIL
-092224 07 58 35 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-092224 07 58 35 PM: INFO: --------------------valid login---------------------
-092224 07 58 35 PM: INFO: Executing test case ID: test_valid_user_login
-092224 07 58 38 PM: DEBUG: My Account page object created
-092224 07 58 38 PM: DEBUG: *Read username: demo123@gmail.com and password from config.ini file*
-092224 07 58 51 PM: ERROR: Login validation failed: Message: 
-Stacktrace:
-	GetHandleVerifier [0x00007FF635119412+29090]
-	(No symbol) [0x00007FF63508E239]
-	(No symbol) [0x00007FF634F4B1DA]
-	(No symbol) [0x00007FF634F9EFE7]
-	(No symbol) [0x00007FF634F9F23C]
-	(No symbol) [0x00007FF634FE97C7]
-	(No symbol) [0x00007FF634FC672F]
-	(No symbol) [0x00007FF634FE65A2]
-	(No symbol) [0x00007FF634FC6493]
-	(No symbol) [0x00007FF634F909D1]
-	(No symbol) [0x00007FF634F91B31]
-	GetHandleVerifier [0x00007FF63543871D+3302573]
-	GetHandleVerifier [0x00007FF635484243+3612627]
-	GetHandleVerifier [0x00007FF63547A417+3572135]
-	GetHandleVerifier [0x00007FF6351D5EB6+801862]
-	(No symbol) [0x00007FF63509945F]
-	(No symbol) [0x00007FF635094FB4]
-	(No symbol) [0x00007FF635095140]
-	(No symbol) [0x00007FF63508461F]
-	BaseThreadInitThunk [0x00007FFC0372257D+29]
-	RtlUserThreadStart [0x00007FFC0480AF28+40]
-
-092224 07 58 51 PM: INFO: Test case has been executed, test result: FAIL
-092224 08 01 41 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-092224 08 01 41 PM: INFO: --------------------valid login---------------------
-092224 08 01 41 PM: INFO: Executing test case ID: test_valid_user_login
-092224 08 01 44 PM: DEBUG: My Account page object created
-092224 08 01 44 PM: DEBUG: *Read username: demo123@gmail.com and password from config.ini file*
-092224 08 05 56 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-092224 08 05 56 PM: INFO: --------------------valid login---------------------
-092224 08 05 56 PM: INFO: Executing test case ID: test_valid_user_login
-092224 08 05 59 PM: DEBUG: My Account page object created
-092224 08 05 59 PM: DEBUG: *Read username: demo123@gmail.com and password from config.ini file*
-092224 08 06 31 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-092224 08 06 31 PM: INFO: --------------------valid login---------------------
-092224 08 06 31 PM: INFO: Executing test case ID: test_valid_user_login
-092224 08 06 34 PM: DEBUG: My Account page object created
-092224 08 06 34 PM: DEBUG: *Read username: demo123@gmail.com and password from config.ini file*
-092224 08 06 48 PM: ERROR: Login validation failed: Message: 
-Stacktrace:
-	GetHandleVerifier [0x00007FF635119412+29090]
-	(No symbol) [0x00007FF63508E239]
-	(No symbol) [0x00007FF634F4B1DA]
-	(No symbol) [0x00007FF634F9EFE7]
-	(No symbol) [0x00007FF634F9F23C]
-	(No symbol) [0x00007FF634FE97C7]
-	(No symbol) [0x00007FF634FC672F]
-	(No symbol) [0x00007FF634FE65A2]
-	(No symbol) [0x00007FF634FC6493]
-	(No symbol) [0x00007FF634F909D1]
-	(No symbol) [0x00007FF634F91B31]
-	GetHandleVerifier [0x00007FF63543871D+3302573]
-	GetHandleVerifier [0x00007FF635484243+3612627]
-	GetHandleVerifier [0x00007FF63547A417+3572135]
-	GetHandleVerifier [0x00007FF6351D5EB6+801862]
-	(No symbol) [0x00007FF63509945F]
-	(No symbol) [0x00007FF635094FB4]
-	(No symbol) [0x00007FF635095140]
-	(No symbol) [0x00007FF63508461F]
-	BaseThreadInitThunk [0x00007FFC0372257D+29]
-	RtlUserThreadStart [0x00007FFC0480AF28+40]
-
-092224 08 06 48 PM: INFO: Test case has been executed, test result: FAIL
-092224 08 08 49 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-092224 08 08 49 PM: INFO: --------------------valid login---------------------
-092224 08 08 49 PM: INFO: Executing test case ID: test_valid_user_login
-092224 08 08 52 PM: DEBUG: My Account page object created
-092224 08 08 52 PM: DEBUG: *Read username: demo123@gmail.com and password from config.ini file*
-092224 08 09 06 PM: ERROR: Login validation failed: Message: 
-Stacktrace:
-	GetHandleVerifier [0x00007FF635119412+29090]
-	(No symbol) [0x00007FF63508E239]
-	(No symbol) [0x00007FF634F4B1DA]
-	(No symbol) [0x00007FF634F9EFE7]
-	(No symbol) [0x00007FF634F9F23C]
-	(No symbol) [0x00007FF634FE97C7]
-	(No symbol) [0x00007FF634FC672F]
-	(No symbol) [0x00007FF634FE65A2]
-	(No symbol) [0x00007FF634FC6493]
-	(No symbol) [0x00007FF634F909D1]
-	(No symbol) [0x00007FF634F91B31]
-	GetHandleVerifier [0x00007FF63543871D+3302573]
-	GetHandleVerifier [0x00007FF635484243+3612627]
-	GetHandleVerifier [0x00007FF63547A417+3572135]
-	GetHandleVerifier [0x00007FF6351D5EB6+801862]
-	(No symbol) [0x00007FF63509945F]
-	(No symbol) [0x00007FF635094FB4]
-	(No symbol) [0x00007FF635095140]
-	(No symbol) [0x00007FF63508461F]
-	BaseThreadInitThunk [0x00007FFC0372257D+29]
-	RtlUserThreadStart [0x00007FFC0480AF28+40]
-
-092224 08 09 06 PM: INFO: Test case has been executed, test result: FAIL
-092224 08 09 40 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
-092224 08 09 40 PM: INFO: --------------------valid login---------------------
-092224 08 09 40 PM: INFO: Executing test case ID: test_valid_user_login
-092224 08 09 43 PM: DEBUG: My Account page object created
-092224 08 09 43 PM: DEBUG: *Read username: demo123@gmail.com and password from config.ini file*
-092224 08 09 57 PM: ERROR: Login validation failed: Message: 
-Stacktrace:
-	GetHandleVerifier [0x00007FF635119412+29090]
-	(No symbol) [0x00007FF63508E239]
-	(No symbol) [0x00007FF634F4B1DA]
-	(No symbol) [0x00007FF634F9EFE7]
-	(No symbol) [0x00007FF634F9F23C]
-	(No symbol) [0x00007FF634FE97C7]
-	(No symbol) [0x00007FF634FC672F]
-	(No symbol) [0x00007FF634FE65A2]
-	(No symbol) [0x00007FF634FC6493]
-	(No symbol) [0x00007FF634F909D1]
-	(No symbol) [0x00007FF634F91B31]
-	GetHandleVerifier [0x00007FF63543871D+3302573]
-	GetHandleVerifier [0x00007FF635484243+3612627]
-	GetHandleVerifier [0x00007FF63547A417+3572135]
-	GetHandleVerifier [0x00007FF6351D5EB6+801862]
-	(No symbol) [0x00007FF63509945F]
-	(No symbol) [0x00007FF635094FB4]
-	(No symbol) [0x00007FF635095140]
-	(No symbol) [0x00007FF63508461F]
-	BaseThreadInitThunk [0x00007FFC0372257D+29]
-	RtlUserThreadStart [0x00007FFC0480AF28+40]
-
-092224 08 09 57 PM: INFO: Test case has been executed, test result: FAIL
+092824 11 06 24 PM: INFO: Loading URL: http://localhost/ecommerce_project/shop/ and launching browser
+092824 11 06 24 PM: INFO: --------------------data driven valid login---------------------
+092824 11 06 24 PM: INFO: Executing test case ID: test_ddt_user_login
+092824 11 06 24 PM: INFO: Number of rows in login_cred file: 4
+092824 11 06 24 PM: DEBUG: Home page object created
+092824 11 06 28 PM: DEBUG: My Account login page object created
+092824 11 06 28 PM: DEBUG: Logging in with user:demo12@gmail.com   and pass: Demo1234@  
+092824 11 06 33 PM: DEBUG: User: demo12@gmail.com   has been logged in successfully
+092824 11 06 33 PM: INFO: Test case has been executed successfully, test result: PASS
+092824 11 06 36 PM: INFO: User is already logged in.
+092824 11 06 43 PM: DEBUG: Logging out to perform next login attempt
+092824 11 06 43 PM: DEBUG: calling logout method of TestLogOut class
+092824 11 06 43 PM: DEBUG: Logging in with user:qe265p@yahoo.com and pass: Demo1234@  
+092824 11 06 49 PM: DEBUG: User: qe265p@yahoo.com has been logged in successfully
+092824 11 06 49 PM: INFO: Test case has been executed successfully, test result: PASS
+092824 11 06 52 PM: INFO: User is already logged in.
+092824 11 06 59 PM: DEBUG: Logging out to perform next login attempt
+092824 11 06 59 PM: DEBUG: calling logout method of TestLogOut class
+092824 11 06 59 PM: DEBUG: Logging in with user:qe2p@yahoo.com and pass: wrong_pass  
+092824 11 07 02 PM: DEBUG: Invalid Login, User: qe2p@yahoo.com is invalid.
+092824 11 07 02 PM: INFO: Test case has been executed successfully, test result: PASS

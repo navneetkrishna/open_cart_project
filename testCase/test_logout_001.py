@@ -22,10 +22,9 @@ class TestLogOut:
     @pytest.mark.smoke
     def test_logout(self, driver, logger):
 
-        self.driver = driver
         try:
 
-            homepage = ecommerce_home_page.HomePage(self.driver)
+            homepage = ecommerce_home_page.HomePage(driver)
             homepage.click_my_account()
 
             # locate logout button
@@ -42,8 +41,10 @@ class TestLogOut:
             logger.error(f"User is not logged in, skipping the test.{e}")
             pytest.skip("User is not logged in.")
 
-            raise
+            # since pytest.skip is already used, 'raise' keyword will become unreachable
+            # raise
 
-        myaccount = ecommerce_my_account_page.Login(self.driver)
-        logger.debug("Logging out...")
-        myaccount.click_logout()
+        my_account = ecommerce_my_account_page.Login(driver)
+        my_account.click_logout()
+
+

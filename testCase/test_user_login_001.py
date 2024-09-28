@@ -198,7 +198,6 @@ class TestUserLogin:
         logger.info('--------------------valid login---------------------')
         logger.info('Executing test case ID: test_valid_user_login')
 
-
         home_page = ecommerce_home_page.HomePage(driver)
         home_page.click_my_account()
 
