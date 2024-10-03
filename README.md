@@ -26,7 +26,7 @@ This project contains a suite of automation tests designed to test the functiona
 
 # ✏️ Installation and setup 🖥️
 
-- run env_setup.bat file to install all the dependencies.
+- run **_env_setup.bat_** file to install all the dependencies.
 - 
                     OR
   
@@ -40,7 +40,7 @@ This project contains a suite of automation tests designed to test the functiona
 
 - install pytest
 
-- to run tests, use ecommerce_flow.py
+- to run tests,exxecute **_run_script.bat_** file
 
 
 
