@@ -26,6 +26,10 @@ This project contains a suite of automation tests designed to test the functiona
 
 # ✏️ Installation and setup 🖥️
 
+- run env_setup.bat file to install all the dependencies.
+- 
+                    OR
+  
 - install and configure Python 3 (refer [requirement.txt](requirements.txt))
 
 - setup your IDE
